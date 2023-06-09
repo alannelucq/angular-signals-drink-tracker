@@ -2,10 +2,16 @@
   <h1>Suivi des boissons</h1>
 
   <div class="tracker-container">
+    <button (click)="decrement()">
+      <span class="material-icons">remove</span>
+    </button>
     <img
       [src]="quantity() > index ? filledImageUrl : emptyImageUrl"
       *ngFor="let index of indexes"
       (click)="quantity.set(index + 1)"
     />
+    <button (click)="increment()">
+      <span class="material-icons">add</span>
+    </button>
   </div>
 </div>
