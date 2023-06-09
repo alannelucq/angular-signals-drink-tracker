@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   indexes = [0, 1, 2, 3, 4];
+  emptyImageUrl = 'https://cdn-icons-png.flaticon.com/512/3100/3100553.png';
+  filledImageUrl = 'https://cdn-icons-png.flaticon.com/512/3100/3100566.png';
+  quantity = signal(2);
 }

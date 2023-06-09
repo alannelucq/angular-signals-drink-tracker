@@ -3,7 +3,7 @@
 
   <div class="tracker-container">
     <img
-      src="https://cdn-icons-png.flaticon.com/512/3100/3100553.png"
+      [src]="quantity() > index ? filledImageUrl : emptyImageUrl"
       *ngFor="let index of indexes"
     />
   </div>
