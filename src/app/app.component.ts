@@ -21,6 +21,7 @@ export class AppComponent {
   type = signal(Drink.Water);
   emptyImageUrl = computed(() => this.type() === Drink.Water ? EMPTY_WATER_URL : EMPTY_COFFEE_URL);
   filledImageUrl = computed(() => this.type() === Drink.Water ? FILLED_WATER_URL : FILLED_COFFEE_URL);
+  message = computed(() => `J'ai bu ${this.quantity()} ${this.type() === Drink.Water ? 'verre(s) d\'eau' : 'tasse(s) de café'}`);
 
   decrement() {
     this.quantity.update(quantity => quantity ? quantity - 1 : 0);
