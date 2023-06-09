@@ -5,6 +5,7 @@
     <img
       [src]="quantity() > index ? filledImageUrl : emptyImageUrl"
       *ngFor="let index of indexes"
+      (click)="quantity.set(index + 1)"
     />
   </div>
 </div>
