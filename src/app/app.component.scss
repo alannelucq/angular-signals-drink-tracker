@@ -1,0 +1,80 @@
+
+:host {
+  display: flex;
+  height: 100%;
+  background: #b6e4f3;
+}
+
+.card {
+  width: 700px;
+  height: 400px;
+  padding: 0 20px 20px 20px;
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  margin: 150px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: white;
+
+  .drink-type {
+    align-self: flex-start;
+    margin-left: 92px;
+    margin-bottom: 24px;
+
+    p {
+      margin-bottom: 5px;
+    }
+
+    input {
+      margin: 5px 10px 5px 0;
+    }
+
+      i {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        background-size: contain;
+
+        &.water {
+          background-image: url('https://cdn-icons-png.flaticon.com/512/3100/3100566.png');
+        }
+
+        &.coffee {
+          background-image: url('https://cdn-icons-png.flaticon.com/512/924/924514.png');
+        }
+      }
+  }
+
+  .tracker-container {
+    display: flex;
+    align-items: center;
+
+    button {
+      border-radius: 10px;
+      border: 1px solid buttonface;
+      width: 40px;
+      height: 40px;
+      margin: 0 20px;
+
+      .material-icons {
+        font-size: 20px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+
+    img:hover {
+      cursor: pointer;
+    }
+  }
+}
