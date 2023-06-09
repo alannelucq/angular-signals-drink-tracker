@@ -1,12 +1,35 @@
 <div class="card">
   <h1>Suivi des boissons</h1>
+  <div class="drink-type">
+    <p>Je veux suivre ma consommation : </p>
+    <div>
+      <input
+        type="radio" id="water" name="type"
+        [checked]="type() === Drink.Water"
+        (change)="type.set(Drink.Water)"
+      >
+      <label for="water">
+        <i class="water"></i> d'eau
+      </label>
+    </div>
+    <div>
+      <input
+        type="radio" id="coffee" name="type"
+        [checked]="type() === Drink.Coffee"
+        (change)="type.set(Drink.Coffee)"
+      >
+      <label for="coffee">
+        <i class="coffee"></i> de café
+      </label>
+    </div>
+  </div>
 
   <div class="tracker-container">
     <button (click)="decrement()">
       <span class="material-icons">remove</span>
     </button>
     <img
-      [src]="quantity() > index ? filledImageUrl : emptyImageUrl"
+      [src]="quantity() > index ? filledImageUrl() : emptyImageUrl()"
       *ngFor="let index of indexes"
       (click)="quantity.set(index + 1)"
     />
